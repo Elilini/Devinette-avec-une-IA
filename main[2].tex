@@ -1,0 +1,198 @@
+\documentclass[a4paper, 12pt, twoside]{article}
+\usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
+\usepackage[T1]{fontenc}		
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{ae,aecompl}
+\usepackage[top=2.5cm, bottom=2cm, 
+			left=3cm, right=2.5cm,
+			headheight=15pt]{geometry}
+\usepackage{graphicx}
+\usepackage{eso-pic}	% Nécessaire pour mettre des images en arrière plan
+\usepackage{array} 
+\usepackage{hyperref}
+\input{pagedegarde}
+
+
+\title{Devinette de sujet abstrait avec une IA}
+\entreprise{Le nom de votre entreprise}
+\datedebut{7 avril 2025}
+\datefin{20 mai 2025}
+
+
+\membrea{YAHYA LABCHIRI Rania 44008335}
+\membreb{IDHAYAKUMAR Elilini 44011065}
+\membrec{AIT ABDELOUHAB-MAHE Yuna élève en régime dérogatoire}
+
+
+\usepackage{float}
+
+\begin{document}
+\pagedegarde
+\section*{Remerciements}
+Merci, merci à tous.
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Dans un premier temps, nous avons réfléchi à des jeux connus de tous, et notre choix s’est porté sur le jeu de devinettes.
+Nous avons eu l’idée d’adapter le principe du jeu de devinettes en remplaçant l’animateur humain par une intelligence artificielle, plus précisément un LLM.
+Notre but est de lui demander de nous faire deviner des notions abstraites et observer comment il s’y prend pour les expliquer de manière claire et compréhensible, afin de nous guider vers la bonne réponse.
+
+
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{ollama-logo.png}
+\caption{Logo Ollama}
+\label{Tux}
+\end{figure}
+
+
+
+\section{Environnement de travail}
+Nous avons utilisé Visual Studio pour écrire et exécuter le code python de notre projet.
+Nous avons également installé un LLM localement  grâce à Ollama. 
+
+-L’IA choisie est: deepseek-r1:7b-qwen-distill-q4_K_M
+
+-Visual Studio, Chatgpt,  LM Studio, Ollama, Python. 
+
+-IA: deepseek_r1:7b-qwen-distill-q4_K_M
+
+\section{Description du projet et objectifs}
+	\subsection{Description du projet}
+ Notre projet consiste en un jeu de devinettes sur des concepts abstraits programmé sur python grâce à Visual Studio.  
+ Il se divise essentiellement en deux parties : D’une part,l’installation de l’LLM puis ,d’autre part, l'écriture du code python de notre programme. Ce projet va donc nous aider à créer un jeu qui permet ainsi d’explorer les capacités d’un LLM à formuler, structurer et transmettre des idées complexes de manière compréhensible pour un humain lambda.
+
+
+	\subsection{ Objectifs du projet}
+ L’objectif de notre projet est d’interagir avec une intelligence artificielle capable de faire deviner des concepts abstraits tels que la liberté, le bonheur, ou encore la justice. Il s’agit d’observer comment une IA peut expliquer à un être humain des notions complexes, souvent difficiles à définir.
+
+ 
+Pour ce faire, l’intelligence artificielle sélectionne de manière autonome un concept abstrait, puis propose une série d’indices permettant aux utilisateurs de le deviner progressivement. Ce projet nous permet d’observer comment l’IA s’y prend pour rendre compréhensibles des idées abstraites.
+   
+
+\section{Bibliothèques, Outils et technologies}
+Pour réaliser ce projet nous avons eu accès à Chatgpt,  LM Studio, Ollama, VisualStudio et Python.
+
+\section{Travail réalisé}
+      \subsection{Les fonctionnalités}
+
+Voici la liste des fonctionnalités que nous avions envisagées pour notre projet.
+
+\begin{itemize}
+\item \textbf{Génération automatique d’un concept abstrait par l’IA} : \textit{Réalisée}. Le modèle choisit un concept abstrait  de manière autonome.
+
+\item \textbf{Production d’indices pour faire deviner ce concept} : \textit{Réalisée}. L’IA fournit des indices progressifs, que l’utilisateur peut demander à tout moment via la commande spécifique "indice".
+
+\item \textbf{Interaction dynamique avec l’utilisateur} : \textit{Réalisée}. Le programme interprète les réponses libres de l’utilisateur et reconnaît les commandes comme \texttt{indice} ou \texttt{abandon}, tout en assurant un dialogue fluide.
+
+\item \textbf{Reconnaissance de la bonne réponse} : \textit{Réalisée}. Le système vérifie si la réponse de l’utilisateur correspond au concept cible, en autorisant des variantes ou approximations.
+
+\item \textbf{Interface graphique ou interface web} : \textit{Non réalisée}. Nous avons préféré nous concentrer sur la robustesse du dialogue avec l’IA en ligne de commande, qui constitue le cœur du projet.De plus, notre programme nous permet de converser avec l'IA à partir du terminal, sans besoin de créer une interface, mais cela reste tout de même moins agréable pour la vue. 
+
+\item \textbf{Sauvegarde automatique des échanges} : \textit{Non réalisée}. Bien que cette fonctionnalité ait été discutée au début du projet, nous l’avons écartée après avoir constaté que la gestion des fichiers texte (encodage, nettoyage, format) ajoutait une complexité qui aurait détourné nos efforts des tests IA et de l’interaction directe.
+
+\end{itemize}
+
+\subsection{La répartition du travail}
+la répartition RÉELLE du travail entre les membres du groupe
+
+Nous avons travaillé en binôme de manière collaborative et régulière. Nous utilisions un Google Doc partagé pour écrire nos idées en temps réel. L’ensemble du projet a été développé à deux, principalement sur l’ordinateur de Elilini, avec un partage d’écran dans les salles Pixel pour faciliter la discussion et les tests en commun.
+
+Nous avons avancé pendant les TD, mais aussi à la bibliothèque universitaire chaque jour pendant une semaine et certains samedis.
+
+Les décisions (choix du modèle, formulation des prompts, design du code) ont été prises à deux. Chacune proposait des idées, l'autre validait ou ajustait.
+
+La répartition s’est naturellement organisée comme suit :
+
+Elilini: a principalement assuré la mise en place technique : téléchargement et configuration des modèles via Ollama, exécution du code Python, débogage.
+
+Rania: a davantage contribué à l’évaluation critique des réponses produites par l’IA, à la formulation  du rapport, et la structuration du projet .
+
+Le code a été écrit à deux en direct, avec des tests réalisés ensemble. Nous avons aussi exploré différentes IA (comme phi-3 et Mistral), analysé leurs limites, et ajusté notre stratégie en fonction de leurs performances
+
+\newpage
+\section{Difficultés rencontrées}
+Les difficultés que nous avons rencontré durant la réalisation de notre projet sont: 
+-Le choix de l’IA: 
+D’abord par rapport au stockage nécessaire,  phi-3 nécessite moins  d’espace de stockage qu'une IA telle que Deepseek. 
+Puis par rapport à la pertinence de leurs réponses , phi-3, par exemple, n’a pas réellement compris ce que l’utilisateur lui demandait, c’est-à-dire, de nous faire deviner un concept abstrait. 
+De plus, grâce à la question “ qui est le président actuel des Etats-Unis” à laquelle leur réponse était: “Joe biden”  on a apprit que les données de ces 2 LLM s'arrêtent au moins avant l’élection de Donald Trump.
+  
+-Utilisation des applications pour installer les LLM:
+-LMStudio,  nous avons rencontré des difficultés pour établir une communication entre LM Studio et notre code Python. C’est pourquoi nous avons finalement choisi d’utiliser Ollama. 
+
+-Ollama, qui s’utilise depuis le terminal de l’ordinateur. 
+
+\section{Bilan}
+	\subsection{Conclusion}
+     Pour conclure, ce projet nous a permis  de nous introduire dans le monde des LLM, en utilisant des outils comme Ollama.Nous avons appris à les intégrer dans des programmes Python pour explorer un sujet qui nous intéresse particulièrement : la manière dont une intelligence artificielle peut expliquer et faire comprendre des concepts abstraits à un être humain.
+     
+	\subsection{Perspectives}
+    Pour améliorer notre projet, plusieurs actions pourraient être envisagées, telles que la création d’une interface de jeu conviviale pour l’utilisateur.
+Nous pourrions également enrichir le jeu en mettant en scène deux LLM, où l’un tenterait de faire deviner un sujet à l’autre.
+
+	
+
+
+\newpage
+\section{Webographie}
+\begin{thebibliography}{2}
+   \bibitem[Installation d’un IA local sur LM]{Installation d’un IA local sur LM} \url{https://youtu.be/K_b_KrqgxU8?si=6dSE74HBji8GTST6 }
+   \bibitem[Installation d’API sur LMStudio]{Installation d’API sur LMStudio} 
+   \url{https://youtu.be/IgcBuXFE6QE?si=ipF_E0PypD00Bia5}
+   \bibitem[Guide Installer DeepSeek en Local et Créer des API]{Guide Installer DeepSeek en Local et Créer des API}\url {https://youtu.be/cidFZQgGNXM?si=3rQvz9fZTUDKOwS2
+}
+   
+\end{thebibliography}
+
+
+\newpage
+\section{Annexes}
+\appendix
+\makeatletter
+\def\@seccntformat#1{Annexe~\csname the#1\endcsname:\quad}
+\makeatother
+	\section{Cahier des charges}
+1) Créer une interaction entre un humain et une IA autour de concepts abstraits
+
+2)Développer un script Python qui gère cette interaction
+
+3)Installer localement un modèle LLM performant
+
+	\section{Exemple d'exécution du projet}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{ExecutionFinal1.png}
+  \caption{Lancement du programme et génération du concept}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{ExecutionFinal.png}
+  \caption{Interaction avec l'utilisateur et réponse de l'IA}
+\end{figure}
+
+    
+	\section{Manuel utilisateur}
+      Une fois le programme exécuté l’utilisateur pourra :
+    
+     - Taper une réponse
+     
+     -Demander un nouvel indice avec le mot-clé indice.
+     
+     -Abandonner avec le mot-clé abandon pour voir la réponse.
+
+
+
+
+
+\end{document}
